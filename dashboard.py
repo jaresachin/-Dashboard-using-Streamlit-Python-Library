@@ -1,8 +1,6 @@
 import streamlit as st #Web app
 import pandas as pd # data manipulation
-import seaborn as sns
 import plotly.express as px #pip install plotly.express
-import numpy as np
 
 
 #https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -44,9 +42,6 @@ df_selection=df.query(
     "CustomerID==@Customer"
 )
 
-st.write("**Data Frame:**")
-st.dataframe(df_selection) #data set
-
 #To get data for barchart
 d1 = df_selection[["CustomerID", "PriceTotal", "Number_of_Delivery_days"]]
 d2 = d1.groupby(by="CustomerID").sum()[["PriceTotal"]].sort_values(["PriceTotal"], ascending=False).reset_index()
@@ -58,5 +53,7 @@ bar_plot = px.bar(d2, x='CustomerID', y='PriceTotal')
 st.plotly_chart(bar_plot)
 st.markdown("---")  #get line
 
+st.write("**Data Frame:**")
+st.dataframe(df_selection) #data set
 
 
