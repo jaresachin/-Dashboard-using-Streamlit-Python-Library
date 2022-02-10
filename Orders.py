@@ -9,7 +9,7 @@ st.set_page_config(page_title="Orders dashboard",
                    layout="wide")
 
 #Load data
-df=pd.read_excel("F:/Job/Internship/Data_Science_Lab/Orders.xlsx",sheet_name=1)
+df=pd.read_excel("Orders.xlsx",sheet_name=1)
 
 #Add Header
 #st.title("Orders Dashboard")
