@@ -1,6 +1,6 @@
-import streamlit as st #Web app
-import pandas as pd # data manipulation
-import plotly.express as px #pip install plotly.express
+import streamlit as st          #Web app
+import pandas as pd             # data manipulation
+import plotly.express as px     #pip install plotly.express
 
 
 #https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -22,10 +22,7 @@ html_temp="""
 """
 st.markdown(html_temp,unsafe_allow_html=True)
 
-
-
 st.write("")   #Add some text/ space
-
 
 #------SIDEBAR---
 
